@@ -1,0 +1,32 @@
+<html>
+<div class="pageContainer">
+<form class="ui large form segment">
+  <h3 class="ui header">Sobe</h3>
+  <div class="field">
+  <label for="title">Dodajte sobu:</label>
+  <input name="title" id="title" #newtitle>
+</div>
+  <div class="field">
+  <label for="price">Cena:</label>
+  <input name="price" id="price" #newprice>
+</div>
+
+<button (click)="addArticle(newtitle, newprice)" class="ui positive right floated
+button">
+Dodaj
+</button>
+
+  </form>
+
+  <div class="ui grid posts">
+    <app-article *ngFor="let article of articles" [article]="article">
+    </app-article>
+
+
+    </div>
+    </div>
+
+    </html>
+
+
+
